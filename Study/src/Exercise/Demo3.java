@@ -42,6 +42,11 @@ public class Demo3 {
             String next = (String) it.next();
             System.out.println(next);
         }
+        System.out.println("----------------------------------------");
+
+        String str="aa";
+        boolean flag = Objects.equals("aa", str);
+        System.out.println("flag="+flag);
 
     }
 }
