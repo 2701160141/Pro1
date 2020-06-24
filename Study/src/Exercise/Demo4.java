@@ -1,6 +1,8 @@
 package Exercise;
 
+import java.util.Dictionary;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 public class Demo4 {
@@ -53,5 +55,12 @@ public class Demo4 {
 
     public static void main(String[] args) {
         System.out.println(WeekDayEnum.findByCode(1));
+
+        Map<String,Integer> map=new HashMap<>();
+        synchronized (Demo4.class){
+            map.put("aa",1);
+            map.put("bb",1);
+        }
+        System.out.println(map.toString());
     }
 }
