@@ -9,13 +9,25 @@ public class Face3 {
         if (prefix != " ")
             System.out.println(prefix);
         for (int i = 0; i < candidate.size(); i++) {
-            List<String> temp = new LinkedList<String>(candidate);
+            List<String> temp = new LinkedList<>(candidate);
             listAll(temp, prefix + temp.remove(i));
+        }
+    }
+
+    public static void listAll2(List<String> list) {
+        if (!list.isEmpty())
+            System.out.println(list.toArray());
+        for (int i = list.size() - 1; i >= 0; i--) {
+            List<String> temp = new LinkedList<>(list);
+            temp.remove(i);
+            listAll2(temp);
         }
     }
 
     public static void main(String[] args) {
         String[] array = new String[]{"1", "2", "3", "4"};
         listAll(Arrays.asList(array), " ");
+        listAll2(Arrays.asList(array));
+//    }
     }
 }
