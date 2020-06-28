@@ -21,5 +21,7 @@ public class Face5 {
         for (Map.Entry<Character, Integer> m : map.entrySet()) {
             if (m.getValue() == max) System.out.println(m.getKey() + ":" + m.getValue());
         }
+        System.out.println("-------------------------------------------");
+        System.out.println(map.keySet());
     }
 }
