@@ -3,7 +3,8 @@ package nowcoder;
 import java.util.Scanner;
 
 public class Demo1 {
-    static int father[], total;
+    static int father[];
+//    static int total;
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
@@ -14,7 +15,7 @@ public class Demo1 {
             for (int i = 0; i < m; i++) {
                 union(cin.nextInt(), cin.nextInt());
             }
-            if (total == 1) System.out.println("Yes");
+            if (father[n] == 1) System.out.println("Yes");
             else System.out.println("No");
         }
         cin.close();
@@ -25,7 +26,7 @@ public class Demo1 {
         int q = find(y);
         if (p == q) return;
         father[q] = p;
-        total--;
+//        total--;
     }
 
     private static int find(int x) {
@@ -33,7 +34,7 @@ public class Demo1 {
     }
 
     private static void init(int n) {
-        total = n;
+//        total = n;
         father = new int[n + 1];
         for (int i = 1; i <= n; i++) {
             father[i] = i;
